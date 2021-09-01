@@ -1,0 +1,33 @@
+[
+       {
+         "img": "https://images-na.ssl-images-amazon.com/images/I/711mkyvqNKL.jpg",
+         "title": "Dune",
+         "author": "author1"
+       },
+       {
+        "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/F9_film_poster.jpg",
+        "title": "FF9",
+        "author": "author2"
+       },
+       {
+        "img": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/Featured-Image-3.jpg",
+        "title": "Jojo",
+        "author": "author3"
+       },
+       {
+        "img": "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+        "title": "Naruto",
+        "author": "author4"
+       },
+       {
+        "img": "https://c4.wallpaperflare.com/wallpaper/370/127/644/uchiha-sasuke-rinnegan-eternal-mangekyou-sharingan-naruto-shippuuden-wallpaper-preview.jpg",
+        "title": "Sasuke",
+        "author": "Kisimoto"
+       },
+       {
+        "img": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+        "title": "Onepiece",
+        "author": "Oda"
+       }
+     
+]
