@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './logo.svg';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
@@ -10,7 +9,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import itemData from './data/itemData';
 
 
-// function App() {
+// export default function App() {
 //   return (
 
 
@@ -43,7 +42,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
+    overflowY: 'hidden',
+
+    backgroundColor: theme.palette.background.default,
   },
   imageList: {
     flexWrap: 'nowrap',
@@ -78,7 +79,11 @@ const useStyles = makeStyles((theme) => ({
  */
 export default function SingleLineImageList() {
   const classes = useStyles();
+  console.log("This is classes in App.js");
+  console.log(classes);
 
+  console.log(classes.root);
+  
   return (
     <div className={classes.root}>
       <ImageList className={classes.imageList} cols={4.5}>
