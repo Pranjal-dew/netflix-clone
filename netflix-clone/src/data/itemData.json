@@ -2,32 +2,38 @@
        {
          "img": "https://images-na.ssl-images-amazon.com/images/I/711mkyvqNKL.jpg",
          "title": "Dune",
-         "author": "author1"
+         "studio": "Animax",
+         "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        },
        {
         "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/F9_film_poster.jpg",
         "title": "FF9",
-        "author": "author2"
+        "studio": "WB",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        },
        {
         "img": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/Featured-Image-3.jpg",
         "title": "Jojo",
-        "author": "author3"
+        "studio": "Netflix",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        },
        {
         "img": "https://i.redd.it/ryddvd71m4f61.jpg",
         "title": "Naruto",
-        "author": "author4"
+        "studio": "Vizcom",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        },
        {
         "img": "https://wallpapercave.com/wp/wp8508875.jpg",
         "title": "Sasuke",
-        "author": "Kisimoto"
+        "studio": "Aniplex",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        },
        {
         "img": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
         "title": "Onepiece",
-        "author": "Oda"
+        "studio": "Todo animation",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        }
      
 ]

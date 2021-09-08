@@ -42,8 +42,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    overflowY: 'hidden',
-
+    
     backgroundColor: theme.palette.background.default,
   },
   imageList: {
