@@ -1,105 +1,57 @@
-import React from 'react'
-import './App.css';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import itemData from './data/itemData';
-
-
-// export default function App() {
-//   return (
-
-
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-      
-//     </div>
-
-    
-
-//   );
-// }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden',
-    
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.palette.background.paper,
+    maxHeight:theme.spacing(30),
+    paddingTop:theme.spacing(4),
+    paddingBottom:theme.spacing(4),
+    //padding:theme.spacing(2),
   },
+
   imageList: {
     flexWrap: 'nowrap',
+    
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    //  '&:overflow-x': 'scroll',
+    //  '&:overflow-y': 'hidden',
     transform: 'translateZ(0)',
-  },
-  title: {
-    color: '#ffffff',
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+    '&:overflow-y': 'hidden',
+    '&:overflow-x': 'scroll',
+
   },
   titleBar: {
     background:
       'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
   },
+
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const itemData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
-export default function SingleLineImageList() {
+export default function Row({RowTitle, Data, isLarge=false}) {
   const classes = useStyles();
-  console.log("This is classes in App.js");
-  console.log(classes);
 
-  console.log(classes.root);
-  
   return (
     <div className={classes.root}>
-      <ImageList className={classes.imageList} cols={4.5}>
-        {itemData.map((item) => (
+      <ImageList className={classes.imageList} cols={2.5}>
+        {Data.map((item) => (
           <ImageListItem key={item.img}>
-            <img src={item.img} alt={item.title} />
+            <img src={item.img} alt={item.title} key={item.id}/>
             <ImageListItemBar
               title={item.title}
               classes={{
                 root: classes.titleBar,
                 title: classes.title,
               }}
-              actionIcon={
-                <IconButton aria-label={`star ${item.title}`}>
-                  <StarBorderIcon className={classes.title} />
-                </IconButton>
-              }
             />
           </ImageListItem>
         ))}
@@ -107,4 +59,3 @@ export default function SingleLineImageList() {
     </div>
   );
 }
-

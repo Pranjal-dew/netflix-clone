@@ -1,12 +1,14 @@
 import React from 'react'
-import {  Card, CardActionArea,  CardContent, CardMedia, Container, makeStyles, Typography } from '@material-ui/core'
+import {  Button, Card, CardActionArea,  CardContent, CardMedia, makeStyles, Typography } from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
+import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 
 
 
 const useStyles = makeStyles((theme)=>({
   root: {
     alignItems:"center",
+    backgroundColor:theme.palette.background.paper,
   },
   media: {
     height: 300,
@@ -15,20 +17,30 @@ const useStyles = makeStyles((theme)=>({
     paddingTop:theme.spacing(2),
     paddingBottom:theme.spacing(2),
     background: ""
+  },
+  title_play:{
+    display: 'flex',
+    // paddingBottom:theme.spacing(2),
+
+    justifyContent: 'space-between',
+    // paddingInlineEnd:theme.spacing(2),
+  },
+  button:{
+    // marginRight:theme.spacing(4),
   }
+
 
 }))
 
 
 function Banner(props) {
 
-  let data = props.Data;
-  console.log("This is the banner props",data);
+  let {Data} = props;
+  console.log("This is the banner props",Data);
   const classes = useStyles();
 
   return (
-    <Container
-    disableGutters={true}
+    <div
     className={classes.con}
     
     >
@@ -38,28 +50,30 @@ function Banner(props) {
       stopAutoPlayOnHover = {false}
     >
       {
-          data.map((item,i)=>(
+          Data.map((item,i)=>(
               <Item key={i} item={item}/>
           ))
       }
     </Carousel>
     
-    </Container>
+    </div>
   )
 }
 
 function Item(props){
   let item = props.item;
   const classes = useStyles();
-  console.log(item)
   return(
     <CardActionArea >
-      <Card className = {classes.root} gutterBottom >  
+      <Card className = {classes.root} gutterbottom="true" >  
         <CardMedia className={classes.media} image={item.img}/>
         <CardContent>
+          <div className={classes.title_play}>
           <Typography gutterBottom variant="h5" component="h2">
-          {item.title}
+            {item.title}
           </Typography>
+          <Button variant="outlined" className={classes.button}>Play<PlayArrowRoundedIcon/> </Button>
+          </div>
           <Typography variant="body1" color="textSecondary" component="p" >
           {item.studio}
           </Typography>

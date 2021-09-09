@@ -1,20 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './navbar.js';
-import Row from './Row.js';
-import Banner from './Banner.js';
-
-import itemData from './data/itemData';//Because we dont have backend right now
+import Homepage from './Homepage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar/>
-    <Banner Data={itemData}/>
-    <Row RowTitle="Recently Watched" Data={itemData} isLarge/>
-    
+    <Homepage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
