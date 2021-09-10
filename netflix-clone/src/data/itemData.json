@@ -34,6 +34,24 @@
         "title": "Onepiece",
         "studio": "Todo animation",
         "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+       },
+       {
+        "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/F9_film_poster.jpg",
+        "title": "FF9",
+        "studio": "WB",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+       },
+       {
+        "img": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/Featured-Image-3.jpg",
+        "title": "Jojo",
+        "studio": "Netflix",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+       },
+       {
+        "img": "https://i.redd.it/ryddvd71m4f61.jpg",
+        "title": "Naruto",
+        "studio": "Vizcom",
+        "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
        }
      
 ]

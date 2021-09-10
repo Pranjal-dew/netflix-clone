@@ -1,61 +1,69 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    backgroundColor: theme.palette.background.paper,
-    maxHeight:theme.spacing(30),
-    paddingTop:theme.spacing(4),
-    paddingBottom:theme.spacing(4),
-    //padding:theme.spacing(2),
-  },
 
-  imageList: {
+  row: {
+    display: 'flex',
     flexWrap: 'nowrap',
-    
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    //  '&:overflow-x': 'scroll',
-    //  '&:overflow-y': 'hidden',
-    transform: 'translateZ(0)',
+    // backgroundColor:'#757ce8',
+    overflowY: 'hidden',
+    overflowX: 'scroll',
     '&::-webkit-scrollbar': {
       display: 'none',
     },
-    '&:overflow-y': 'hidden',
-    '&:overflow-x': 'scroll',
-
+    /* hdjhfjkashdfkj */
   },
-  titleBar: {
-    background:
-      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+  root: {//card number
+
+    marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(1),
+    // backgroundColor:'#ff7961',
+  },
+  media: {
+    height: 120,
+    width: 200,
+  },
+  mediaLarge: {
+    height: 200,
+    width: 150,
   },
 
 }));
 
-export default function Row({RowTitle, Data, isLarge=false}) {
+export default function Row({ RowTitle, Data, isLarge = false, id }) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <ImageList className={classes.imageList} cols={2.5}>
-        {Data.map((item) => (
-          <ImageListItem key={item.img}>
-            <img src={item.img} alt={item.title} key={item.id}/>
-            <ImageListItemBar
-              title={item.title}
-              classes={{
-                root: classes.titleBar,
-                title: classes.title,
-              }}
-            />
-          </ImageListItem>
+
+    <div>
+      <Typography variant="h5" gutterBottom>{RowTitle}</Typography>
+      <div className={classes.row} id={id}>
+        {Data.map((item, index) => (
+          <div className={classes.root} key={index}>
+            <Card >
+              <CardActionArea>
+                <CardMedia
+                  className={isLarge ? classes.mediaLarge : classes.media}
+                  image={item.img}
+                  title={item.title}
+                />
+                <CardContent>
+                  <Typography>
+                    {item.title}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+
+            </Card>
+          </div>
         ))}
-      </ImageList>
+      </div>
     </div>
   );
 }
+
+

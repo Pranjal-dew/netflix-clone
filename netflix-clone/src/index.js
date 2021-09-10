@@ -6,7 +6,7 @@ import Homepage from './Homepage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Homepage/>
+    <Homepage />
   </React.StrictMode>,
   document.getElementById('root')
 );
