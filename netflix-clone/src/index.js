@@ -2,11 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Homepage from './Homepage';
+import Viewer from './Viewer';
+import Detail from './Detail'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Homepage />
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Viewer} />
+        <Route exact path="/detail" component={Detail} />
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

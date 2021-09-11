@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     alignItems: "center",
     backgroundColor: theme.palette.background.paper,
-    margin:1,
-    marginBottom:theme.spacing(1),
+    margin: 1,
+    marginBottom: theme.spacing(1),
   },
   media: {
     height: 300,
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
   },
-  
+
   title_play: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // marginRight:theme.spacing(4),
     borderRadius: "5px",
     border: theme.palette.primary.main,
+    alignItems: 'center',
     //padding: "20px",
     //backgroundColor:'#000000',
   }
@@ -43,7 +44,7 @@ function Banner(props) {
   const classes = useStyles();
 
   return (
-    <div  className={classes.con}>
+    <div className={classes.con}>
 
       <Carousel
         indicators={false}

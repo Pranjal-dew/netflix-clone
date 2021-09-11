@@ -1,16 +1,13 @@
 import { Container } from '@material-ui/core'
 import React from 'react'
-import Navbar from './navbar.js';
 import Row from './Row.js';
 import Banner from './Banner.js';
 import itemData from './data/itemData';//Because we dont have backend right now
-import RowDevendra from './RowDevendra.js';
+
 
 function Homepage() {
     return (
-        <div>
-            <Navbar />
-            <Container>
+        <Container>
                 <Banner Data={itemData} />
                 <Row RowTitle="Recently Watched" Data={itemData} isLarge id="row-1" />
                 <Row RowTitle="Popular" Data={itemData} id="row-2" />
@@ -23,7 +20,6 @@ function Homepage() {
                 <Row RowTitle="Anime" Data={itemData} isLarge id="row-9" />
                 {/* <RowDevendra RowTitle="Recently Watched" Data={itemData} isLarge id="row-4"/> */}
             </Container>
-        </div>
     )
 }
 
