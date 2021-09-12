@@ -52,7 +52,7 @@ export default function Row({ RowTitle, Data, isLarge = false, id }) {
                   title={item.title}
                 />
                 <CardContent>
-                  <Typography>
+                  <Typography >
                     {item.title}
                   </Typography>
                 </CardContent>

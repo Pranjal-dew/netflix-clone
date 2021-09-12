@@ -7,7 +7,8 @@ import Homepage from './Homepage.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './navbar.js';
 import Footer from './Footer'
-import Login from './Login'
+import SignIn from './SignIn'
+import SignUp from './SignUp'
 import Profile from './Profile'
 
 ReactDOM.render(
@@ -17,7 +18,8 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" exact component={Homepage} />
         <Route path="/detail" component={Detail} />
-        <Route path="/login" component={Login} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/signup" component={SignUp} />
         <Route path='/profile' component={Profile}/>
       </Switch>
     </Router>
