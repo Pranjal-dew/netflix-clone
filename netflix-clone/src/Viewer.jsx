@@ -11,7 +11,7 @@ export default function Viewer() {
             <Navbar />
             <Router>
                 <Switch>
-                    <Homepage/>
+                    <Homepage />
                 </Switch>
             </Router>
             <Footer />

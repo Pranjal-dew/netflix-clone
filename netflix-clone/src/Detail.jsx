@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         backgroundColor: theme.palette.background.paper,
         margin: 1,
+        paddingTop: theme.spacing(2),
+        paddingBottom: theme.spacing(2),
         marginBottom: theme.spacing(1),
     },
     media: {
