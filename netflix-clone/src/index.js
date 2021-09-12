@@ -7,14 +7,18 @@ import Homepage from './Homepage.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './navbar.js';
 import Footer from './Footer'
+import Login from './Login'
+import Profile from './Profile'
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <Router>
       <Switch>
-        <Route path="/" exact component={Homepage} />
-        <Route exact path="/detail" component={Detail} />
+        <Route exact path="/" exact component={Homepage} />
+        <Route path="/detail" component={Detail} />
+        <Route path="/login" component={Login} />
+        <Route path='/profile' component={Profile}/>
       </Switch>
     </Router>
     <Footer />

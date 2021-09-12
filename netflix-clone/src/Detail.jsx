@@ -9,8 +9,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         backgroundColor: theme.palette.background.paper,
         margin: 1,
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
+        marginTop: theme.spacing(2),
         marginBottom: theme.spacing(1),
     },
     media: {
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "5px",
         border: theme.palette.primary.main,
         alignItems: 'center',
+        display:'flex',
         //padding: "20px",
         //backgroundColor:'#000000',
     }
@@ -37,7 +37,7 @@ export default function Detail() {
     return (
         <Container>
             <Item />
-            <Row RowTitle="Similar Movies" Data={itemData} isLarge id="row-1" />
+            <Row RowTitle="More Like This" Data={itemData} isLarge id="row-1" />
             <Row RowTitle="Popular" Data={itemData} id="row-2" />
         </Container>
     )
@@ -51,19 +51,21 @@ function Item(props) {
                 <CardMedia className={classes.media} image='https://i.ytimg.com/vi/aSiDu3Ywi8E/maxresdefault.jpg' />
                 <CardContent>
                     <div className={classes.title_play}>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            FF9
-                        </Typography>
-
-                        <Typography variant="button" className={classes.button}>Play <PlayArrowRoundedIcon /></Typography>
-
+                    <Typography gutterBottom variant="h5" component="h2">
+                    FF9
+                    </Typography>
+                    <div className={classes.button}>
+                    <PlayArrowRoundedIcon />
+                    <Typography variant="button" >Play </Typography>
+                    
+                    </div>
 
                     </div>
                     <Typography variant="body1" color="textSecondary" component="p" >
-                        WB
+                    WB
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Typography>
                 </CardContent>
             </CardActionArea>
