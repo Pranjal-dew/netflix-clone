@@ -20,7 +20,7 @@ ReactDOM.render(
         <Route path="/detail" component={Detail} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
-        <Route path='/profile' component={Profile}/>
+        <Route path='/profile' component={Profile} />
       </Switch>
     </Router>
     <Footer />

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "1px",
     border: theme.palette.primary.main,
     alignItems: 'center',
-    display:'flex',
+    display: 'flex',
     //padding: "20px",
     //backgroundColor:'#000000',
   }
@@ -79,10 +79,10 @@ function Item(props) {
             </Typography>
 
             <div className={classes.button}>
-                    <PlayArrowRoundedIcon />
-                    <Typography variant="button" >Play </Typography>
-                    
-                    </div>
+              <PlayArrowRoundedIcon />
+              <Typography variant="button" >Play </Typography>
+
+            </div>
 
 
           </div>

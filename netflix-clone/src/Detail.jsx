@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "5px",
         border: theme.palette.primary.main,
         alignItems: 'center',
-        display:'flex',
+        display: 'flex',
         //padding: "20px",
         //backgroundColor:'#000000',
     }
@@ -51,21 +51,21 @@ function Item(props) {
                 <CardMedia className={classes.media} image='https://i.ytimg.com/vi/aSiDu3Ywi8E/maxresdefault.jpg' />
                 <CardContent>
                     <div className={classes.title_play}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                    FF9
-                    </Typography>
-                    <div className={classes.button}>
-                    <PlayArrowRoundedIcon />
-                    <Typography variant="button" >Play </Typography>
-                    
-                    </div>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            FF9
+                        </Typography>
+                        <div className={classes.button}>
+                            <PlayArrowRoundedIcon />
+                            <Typography variant="button" >Play </Typography>
+
+                        </div>
 
                     </div>
                     <Typography variant="body1" color="textSecondary" component="p" >
-                    WB
+                        WB
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Typography>
                 </CardContent>
             </CardActionArea>
