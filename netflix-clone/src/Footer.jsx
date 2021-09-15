@@ -36,7 +36,7 @@ export default function Footer(props) {
                     Netflix Clone
                 </Typography>
                 <Typography variant="subtitle2" align="center" color="textSecondary" component="p">
-                    Something here to give the footer a purpose!
+                    All our dreams can come true, if we have the courage to pursue them.
                 </Typography>
                 <Copyright />
             </Container>
