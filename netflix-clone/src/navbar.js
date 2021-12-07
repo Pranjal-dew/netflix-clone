@@ -5,8 +5,10 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import Box from '@material-ui/core/Box';
 import SearchIcon from '@material-ui/icons/Search';
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     display: 'none',
+    colorRendering: theme.palette.common.white,
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -70,18 +73,35 @@ export default function SearchAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Netflix Clone
-          </Typography>
-          <div className={classes.search}>
+          
+          {/* <Button variant="text"><Link to="/" >Netflix Clone</Link></Button> */}
+          <Box display="flex" >
+          <Link to="/" className={classes.title}>
+            <Button underline="none">Home</Button>
+          </Link>
+
+          <Link to="/" className={classes.title}>
+            <Button underline="none">TV Shows</Button>
+          </Link>
+
+          <Link to="/" className={classes.title}>
+            <Button underline="none">Movie</Button>
+          </Link>
+
+          <Link to="/" className={classes.title}>
+            <Button underline="none">Anime</Button>
+          </Link>
+
+          <Link to="/" className={classes.title}>
+            <Button underline="none">New & Popular</Button>
+          </Link>
+
+          <Link to="/" className={classes.title}>
+            <Button underline="none">My List</Button>
+          </Link>
+          </Box>
+
+          <div className={classes.search} >
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>

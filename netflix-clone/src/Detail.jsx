@@ -3,6 +3,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Container, makeStyles, Ty
 import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 import itemData from './data/itemData';
 import Row from './Row.js';
+import { useParams } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,17 +34,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Detail() {
     const classes = useStyles();
+    const {id} = useParams();
 
     return (
         <Container>
-            <Item />
+            <h2>ID is = {id}</h2>
+            <Item Data={itemData} />
             <Row RowTitle="More Like This" Data={itemData} isLarge id="row-1" />
             <Row RowTitle="Popular" Data={itemData} id="row-2" />
         </Container>
     )
 }
 
-function Item(props) {
+function Item({Data}) {
     const classes = useStyles();
     return (
         <Card className={classes.root}>

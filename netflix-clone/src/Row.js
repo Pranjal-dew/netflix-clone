@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,6 +46,7 @@ export default function Row({ RowTitle, Data, isLarge = false, id }) {
       <div className={classes.row} id={id}>
         {Data.map((item, index) => (
           <div className={classes.root} key={index}>
+            <Link to={`/detail/${item.id}`}>
             <Card >
               <CardActionArea>
                 <CardMedia
@@ -59,6 +62,7 @@ export default function Row({ RowTitle, Data, isLarge = false, id }) {
               </CardActionArea>
 
             </Card>
+            </Link>
           </div>
         ))}
       </div>
