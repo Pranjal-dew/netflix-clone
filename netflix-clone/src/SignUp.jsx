@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from 'react-router-dom';
+import {useAuth} from './contexts/AuthContext'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,8 +37,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
-    const classes = useStyles();
+    const classes = useStyles()
+    const signup = useAuth()
 
+    function handleSubmit(e){
+        e.preventDefault()
+    }
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -50,29 +55,6 @@ export default function SignUp() {
                 </Typography>
                 <form className={classes.form} noValidate>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} sm={6}>
-                            <TextField
-                                autoComplete="fname"
-                                name="firstName"
-                                variant="outlined"
-                                required
-                                fullWidth
-                                id="firstName"
-                                label="First Name"
-                                autoFocus
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField
-                                variant="outlined"
-                                required
-                                fullWidth
-                                id="lastName"
-                                label="Last Name"
-                                name="lastName"
-                                autoComplete="lname"
-                            />
-                        </Grid>
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
