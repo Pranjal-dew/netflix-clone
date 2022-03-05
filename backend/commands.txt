@@ -1,0 +1,17 @@
+source py3-django-env/bin/activate
+deactivate
+pip list --local
+
+===================================
+python3 -m pip install djangorestframework
+python3 -m pip install django
+
+===================================
+pip freeze
+===================================
+asgiref==3.5.0
+backports.zoneinfo==0.2.1
+Django==4.0.3
+djangorestframework==3.13.1
+pytz==2021.3
+sqlparse==0.4.2
